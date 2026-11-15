@@ -12,7 +12,12 @@
   <main>
     <h2>Items</h2>
     <p>A simple list of lost and found items. The entries below are examples.</p>
-    <!-- filter -->
+    <label for="status-filter">Show items:</label>
+    <select id="status-filter">
+      <option value="All">All</option>
+      <option value="Lost">Lost</option>
+      <option value="Found">Found</option>
+    </select>
     <table>
       <thead><tr><th>Item ID</th><th>Item</th><th>Location</th><th>Status</th></tr></thead>
       <tbody>
@@ -24,6 +29,6 @@
     </table>
     <p>See the <a href="about.html">About page</a> for reporting and claiming instructions.</p>
   </main>
-  <!-- filter-script -->
+  <script src="filter.js"></script>
 </body>
 </html>
