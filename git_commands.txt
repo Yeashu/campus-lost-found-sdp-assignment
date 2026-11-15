@@ -1,0 +1,127 @@
+GIT COMMANDS USED
+
+Commands were run from the campus-lost-found folder.
+Repeated commands are explained once.
+
+01. git --version
+Displays the installed version of Git.
+
+02. git init -b main
+Initializes a repository locally with main as the initial branch.
+
+03. git config user.name 'Prabhav Semwal'
+Sets the author name for commits in this repository.
+
+04. git config user.email yeashusemwal@gmail.com
+Sets the author email for commits in this repository.
+
+05. git config --local credential.helper ''
+Clears inherited credential helpers for this repository.
+
+06. git config --local --add credential.helper '!gh auth git-credential'
+Uses the existing GitHub CLI login to authenticate Git HTTPS operations.
+
+07. git status --short
+Shows new and modified files in a compact format.
+
+08. git add index.html about.html styles.css
+Stages the initial HTML pages and stylesheet.
+
+09. git commit -m 'Add initial home and about pages'
+Records the initial state of the project.
+
+10. git log --oneline
+Displays the history with one line per commit.
+
+11. git log -1 --format=%H%n%cI
+Displays the latest commit ID and its actual commit timestamp.
+
+12. git diff -- index.html
+Shows the changes to the home page before staging.
+
+13. git add index.html
+Stages the changes to index.html.
+
+14. git commit -m 'Add two more sample items'
+Creates the second commit after modifying the home page.
+
+15. git branch feature
+Creates the required feature branch.
+
+16. git switch feature
+Switches to feature before implementing the new functionality.
+
+17. git status --short --branch
+Shows the active branch and the files changed for the filter.
+
+18. git add index.html filter.js
+Stages the dropdown and its filtering script.
+
+19. git commit -m 'Add status filter on feature branch'
+Commits the filter on feature.
+
+20. git log --oneline --decorate -3
+Displays the feature commit and preceding commits with branch labels.
+
+21. git switch main
+Switches back to main before merging the feature.
+
+22. git merge --no-ff feature -m 'Merge feature status filter'
+Merges feature into main and creates an explicit merge commit.
+
+23. git log --oneline --graph --all --decorate
+Displays the history graph, including the branches and merge.
+
+24. git check-ignore -v debug.log temp/notes.txt
+Shows which ignore rule excludes each example file.
+
+25. git status --short --ignored
+Shows ignored paths with !! and other new or modified files.
+
+26. git add .gitignore
+Stages only the .gitignore rules.
+
+27. git commit -m 'Ignore log files and temporary folder'
+Records the ignore configuration.
+
+28. git ls-files
+Lists tracked files, excluding debug.log and the temp folder.
+
+29. git commit -m 'Add temporary listing notice'
+Creates the additional commit that will be undone.
+
+30. git show --format=short HEAD -- index.html
+Displays the latest commit and its changes to index.html.
+
+31. git revert --no-edit HEAD
+Undoes the last commit by creating a new commit with the reverse change.
+
+32. git diff 'HEAD~2' HEAD -- index.html
+Verifies that index.html matches its state before the additional commit; no output means no difference.
+
+33. git status
+Displays the current branch and verifies a clean working tree.
+
+34. git add README.md git_commands.txt
+Stages the project description and command documentation.
+
+35. git commit -m 'Document project and Git commands'
+Records the project guide and command explanations.
+
+36. git remote add origin https://github.com/Yeashu/campus-lost-found-sdp-assignment.git
+Connects the existing local repository to the newly created empty public GitHub repository.
+
+37. git remote -v
+Displays the fetch and push URLs for the remote repository.
+
+38. git push -u origin main
+Pushes main and its complete history to GitHub, setting the upstream branch.
+
+39. git push -u origin feature
+Pushes feature to GitHub and sets its upstream branch.
+
+40. git ls-remote --heads origin main feature
+Retrieves the published branch tips for verification.
+
+41. git rev-parse main feature
+Displays the local branch commit IDs for comparison with GitHub.
