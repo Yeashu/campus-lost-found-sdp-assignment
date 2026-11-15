@@ -1,0 +1,17 @@
+body {
+  max-width: 780px;
+  margin: 24px auto;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+  background: white;
+}
+
+h1 { font-size: 24px; }
+h2 { font-size: 20px; }
+nav { margin-bottom: 24px; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+th, td { border: 1px solid #999; padding: 8px; text-align: left; }
+select { font-size: 14px; padding: 4px; }
